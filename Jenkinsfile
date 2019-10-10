@@ -1,9 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage ('Compile') {
+        stage ('GIT Checkout') {
             steps {
-            echo "Compiled sucessfully";            
+                git 'https://github.com/clooky/pipelinetest.git'
+            }
+        }
+        stage ('Build') {
+            steps {
+            sh label: 'Build', script: 'build.sh'          
             }
         }
         stage ('Test') {
