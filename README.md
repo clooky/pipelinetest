@@ -1,1 +1,2 @@
 # pipelinetest
+Build, Test, Deploy
