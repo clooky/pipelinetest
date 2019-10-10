@@ -8,17 +8,17 @@ pipeline {
         }
         stage ('Build') {
             steps {
-            sh label: '', script: 'bash ./build.sh'          
+            sh label: 'Build', script: 'bash ./build.sh'          
             }
         }
         stage ('Test') {
             steps {
-            echo "Tested sucessfully";            
+            sh label: 'Test', script: 'bash ./test.sh'           
             }
         }
         stage ('Deploy') {
             steps {
-            echo "Deployed sucessfully";            
+            sh label: 'Deploy', script: 'bash ./deploy.sh'            
             }
         }
     }
