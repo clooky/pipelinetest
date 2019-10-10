@@ -8,7 +8,7 @@ pipeline {
         }
         stage ('Build') {
             steps {
-            sh label: '', script: 'build.sh'          
+            sh label: '', script: 'bash ./build.sh'          
             }
         }
         stage ('Test') {
