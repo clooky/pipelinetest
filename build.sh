@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "BUILDING PACKAGE";
-exit 0
+exit 1
