@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('GIT Checkout') {
             steps {
-                git 'https://github.com/clooky/pipelinetest.git'
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/clooky/pipelinetest.git']]])
             }
         }
         stage ('Build') {
