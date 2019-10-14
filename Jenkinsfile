@@ -32,7 +32,6 @@ pipeline {
         }
         success {
             echo "This will run only if successful";
-            build 'Scripted_pipeline'
         }
         failure {
             echo "This will run only if failed";
