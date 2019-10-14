@@ -18,7 +18,8 @@ pipeline {
         }
         stage ('Deploy') {
             steps {
-            sh label: 'Deploy', script: 'bash ./deploy.sh'            
+            sh label: 'Deploy', script: 'bash ./deploy.sh'   
+            build 'Scripted_pipeline'
             }
         }
     }
