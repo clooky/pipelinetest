@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "DEPLOYING PACKAGE";
-exit 1
+exit 0
